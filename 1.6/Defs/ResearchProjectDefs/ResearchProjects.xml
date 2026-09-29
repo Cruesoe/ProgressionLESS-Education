@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
-
 	<ResearchProjectDef>
 		<defName>Ferny_RoughCrib</defName>
 		<label>rough crib</label>
@@ -9,15 +8,14 @@
 		<prerequisites>
 			<li MayRequire="OskarPotocki.VFE.Tribals">VFET_Furniture</li>
 		</prerequisites>
-		<researchViewX>0</researchViewX>
-		<researchViewY>5</researchViewY>
+		<researchViewX>0.00</researchViewX>
+		<researchViewY>2.00</researchViewY>
 		<tab>Education_Tab</tab>
 		<techLevel>Neolithic</techLevel>
 		<tags>
 			<li>ClassicStart</li>
 		</tags>
 	</ResearchProjectDef>
-
 	<ResearchProjectDef>
 		<defName>Ferny_NeolithicEducation</defName>
 		<label>education</label>
@@ -26,148 +24,43 @@
 		<prerequisites>
 			<li>Stonecutting</li>
 		</prerequisites>
-		<researchViewX>0</researchViewX>
-		<researchViewY>0</researchViewY>
+		<researchViewX>0.00</researchViewX>
+		<researchViewY>0.00</researchViewY>
 		<tab>Education_Tab</tab>
 		<techLevel>Neolithic</techLevel>
 		<tags>
 			<li>ClassicStart</li>
 		</tags>
 	</ResearchProjectDef>
-
-	<ResearchProjectDef>
-		<defName>Ferny_BasicEducation</defName>
-		<label>blackboards</label>
-		<description>Build chalk writing boards that make lessons easier to present to a whole class.</description>
-		<baseCost>400</baseCost>
-		<prerequisites>
-			<li>Ferny_NeolithicEducation</li>
-		</prerequisites>
-		<researchViewX>1</researchViewX>
-		<researchViewY>0</researchViewY>
-		<tab>Education_Tab</tab>
-		<techLevel>Medieval</techLevel>
-		<tags>
-			<li>ClassicStart</li>
-		</tags>
-	</ResearchProjectDef>
-
-	<ResearchProjectDef>
-		<defName>Ferny_SchoolBell</defName>
-		<label>school bell</label>
-		<description>Cast a loud hand-rung bell for quickly calling teachers and students to class.</description>
-		<baseCost>300</baseCost>
-		<prerequisites>
-			<li>Ferny_NeolithicEducation</li>
-			<li>Smithing</li>
-		</prerequisites>
-		<researchViewX>1</researchViewX>
-		<researchViewY>2</researchViewY>
-		<tab>Education_Tab</tab>
-		<techLevel>Medieval</techLevel>
-		<tags>
-			<li>ClassicStart</li>
-		</tags>
-	</ResearchProjectDef>
-
-	<ResearchProjectDef MayRequire="OskarPotocki.VFE.Medieval2">
-		<defName>Ferny_ArcheryStation</defName>
-		<label>archery station</label>
-		<description>Set up archery targets for formal shooting lessons with bows.</description>
-		<baseCost>250</baseCost>
-		<prerequisites>
-			<li>Ferny_NeolithicEducation</li>
-		</prerequisites>
-		<researchViewX>0</researchViewX>
-		<researchViewY>3</researchViewY>
-		<tab>Education_Tab</tab>
-		<techLevel>Medieval</techLevel>
-		<tags>
-			<li>ClassicStart</li>
-		</tags>
-	</ResearchProjectDef>
-
-	<ResearchProjectDef MayRequire="VanillaExpanded.VFECore">
-		<defName>Ferny_PunchingBag</defName>
-		<label>punching bag</label>
-		<description>Prepare padded training bags for supervised melee practice.</description>
-		<baseCost>300</baseCost>
-		<prerequisites>
-			<li>Ferny_NeolithicEducation</li>
-		</prerequisites>
-		<researchViewX>0</researchViewX>
-		<researchViewY>1</researchViewY>
-		<tab>Education_Tab</tab>
-		<techLevel>Medieval</techLevel>
-		<tags>
-			<li>ClassicStart</li>
-		</tags>
-	</ResearchProjectDef>
-
 	<ResearchProjectDef>
 		<defName>Ferny_SchoolDesk</defName>
-		<label>school desk</label>
-		<description>Build proper classroom desks that give students a comfortable place to study.</description>
+		<label>classrooms</label>
+		<description>Build blackboards, school desks and school bells to hold classes.</description>
 		<baseCost>450</baseCost>
-		<prerequisites>
-			<li>Ferny_NeolithicEducation</li>
-			<li MayRequireAnyOf="ferny.progressionfurniture,cruesoe.progressionlessfurniture">Ferny_Tables</li>
-		</prerequisites>
-		<researchViewX>1</researchViewX>
-		<researchViewY>1</researchViewY>
+		<researchViewX>1.00</researchViewX>
+		<researchViewY>0.00</researchViewY>
 		<tab>Education_Tab</tab>
 		<techLevel>Medieval</techLevel>
 		<tags>
 			<li>ClassicStart</li>
 		</tags>
-	</ResearchProjectDef>
-
-	<ResearchProjectDef MayRequire="OskarPotocki.VFE.Medieval2">
-		<defName>Ferny_TrainingDummy</defName>
-		<label>training dummy</label>
-		<description>Construct sturdy practice dummies for structured melee classes.</description>
-		<baseCost>350</baseCost>
 		<prerequisites>
 			<li>Ferny_NeolithicEducation</li>
 		</prerequisites>
-		<researchViewX>0</researchViewX>
-		<researchViewY>2</researchViewY>
-		<tab>Education_Tab</tab>
-		<techLevel>Medieval</techLevel>
-		<tags>
-			<li>ClassicStart</li>
-		</tags>
 	</ResearchProjectDef>
-
 	<ResearchProjectDef>
 		<defName>Ferny_IndustrialEducation</defName>
 		<label>whiteboards</label>
 		<description>Produce marker-friendly classroom boards that are cleaner and clearer than chalk boards.</description>
 		<baseCost>600</baseCost>
 		<prerequisites>
-			<li>Ferny_BasicEducation</li>
+			<li>Ferny_SchoolDesk</li>
 		</prerequisites>
-		<researchViewX>2</researchViewX>
-		<researchViewY>0</researchViewY>
+		<researchViewX>2.00</researchViewX>
+		<researchViewY>0.00</researchViewY>
 		<tab>Education_Tab</tab>
 		<techLevel>Industrial</techLevel>
 	</ResearchProjectDef>
-
-	<ResearchProjectDef>
-		<defName>Ferny_ElectricSchoolBell</defName>
-		<label>electric school bell</label>
-		<description>Wire an automatic school bell that can start classes without a teacher ringing it by hand.</description>
-		<baseCost>600</baseCost>
-		<prerequisites>
-			<li>Ferny_SchoolBell</li>
-			<li>Electricity</li>
-		</prerequisites>
-		<researchViewX>2</researchViewX>
-		<researchViewY>2</researchViewY>
-		<tab>Education_Tab</tab>
-		<techLevel>Industrial</techLevel>
-	</ResearchProjectDef>
-
 	<ResearchProjectDef>
 		<defName>Ferny_FirearmStation</defName>
 		<label>firearm station</label>
@@ -177,55 +70,37 @@
 			<li>Ferny_NeolithicEducation</li>
 			<li>Gunsmithing</li>
 		</prerequisites>
-		<researchViewX>0</researchViewX>
-		<researchViewY>4</researchViewY>
+		<researchViewX>2.00</researchViewX>
+		<researchViewY>1.00</researchViewY>
 		<tab>Education_Tab</tab>
 		<techLevel>Industrial</techLevel>
 	</ResearchProjectDef>
-
 	<ResearchProjectDef>
 		<defName>Ferny_Projector</defName>
-		<label>projector</label>
-		<description>Build classroom projectors that link to lesson boards and improve teaching speed.</description>
+		<label>electric classrooms</label>
+		<description>Build projectors and electric school bells for powered classrooms.</description>
 		<baseCost>650</baseCost>
+		<researchViewX>3.00</researchViewX>
+		<researchViewY>0.00</researchViewY>
+		<tab>Education_Tab</tab>
+		<techLevel>Industrial</techLevel>
 		<prerequisites>
 			<li>Ferny_IndustrialEducation</li>
 			<li>Electricity</li>
 		</prerequisites>
-		<researchViewX>3</researchViewX>
-		<researchViewY>0</researchViewY>
-		<tab>Education_Tab</tab>
-		<techLevel>Industrial</techLevel>
 	</ResearchProjectDef>
-
 	<ResearchProjectDef>
-		<defName>Ferny_SpacerEducation</defName>
-		<label>holo-educator screens</label>
-		<description>Fabricate holographic classroom screens that present lessons with responsive three-dimensional displays.</description>
-		<baseCost>900</baseCost>
+		<defName>Ferny_TouchscreenSchoolDesk</defName>
+		<label>spacer classrooms</label>
+		<description>Build holo-educator screens and touchscreen school desks.</description>
+		<baseCost>1000</baseCost>
+		<researchViewX>4.00</researchViewX>
+		<researchViewY>0.00</researchViewY>
+		<tab>Education_Tab</tab>
+		<techLevel>Spacer</techLevel>
 		<prerequisites>
 			<li>Fabrication</li>
 			<li>Ferny_Projector</li>
 		</prerequisites>
-		<researchViewX>4</researchViewX>
-		<researchViewY>0</researchViewY>
-		<tab>Education_Tab</tab>
-		<techLevel>Spacer</techLevel>
 	</ResearchProjectDef>
-
-	<ResearchProjectDef>
-		<defName>Ferny_TouchscreenSchoolDesk</defName>
-		<label>touchscreen school desk</label>
-		<description>Fabricate interactive classroom desks that pair with holo-educator screens for advanced lessons.</description>
-		<baseCost>1000</baseCost>
-		<prerequisites>
-			<li>Fabrication</li>
-			<li>Ferny_SchoolDesk</li>
-		</prerequisites>
-		<researchViewX>2</researchViewX>
-		<researchViewY>1</researchViewY>
-		<tab>Education_Tab</tab>
-		<techLevel>Spacer</techLevel>
-	</ResearchProjectDef>
-
 </Defs>

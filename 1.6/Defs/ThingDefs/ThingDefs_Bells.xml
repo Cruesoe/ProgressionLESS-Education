@@ -82,7 +82,8 @@
     <soundImpactDefault>BulletImpact_Metal</soundImpactDefault>
     <leaveResourcesWhenKilled>true</leaveResourcesWhenKilled>
     <researchPrerequisites>
-      <li>Ferny_SchoolBell</li>
+      <li>Ferny_SchoolDesk</li>
+      <li>Smithing</li>
     </researchPrerequisites>
     <comps>
       <li Class="ProgressionEducation.CompProperties_Bell">
@@ -114,7 +115,7 @@
     <uiOrder>0.3</uiOrder>
     <size>(1,1)</size>
     <researchPrerequisites>
-      <li>Ferny_ElectricSchoolBell</li>
+      <li>Ferny_Projector</li>
     </researchPrerequisites>
     <costList>
       <Steel>75</Steel>

@@ -25,7 +25,7 @@
  <xpath>/Defs/ThingDef[defName="Joy_PunchingBag"]/researchPrerequisites</xpath>
       <value>
         <researchPrerequisites>
-            <li>Ferny_PunchingBag</li>
+            <li>Ferny_TrainingDummy</li>
         </researchPrerequisites>
       </value>
     </match>
@@ -33,7 +33,7 @@
       <xpath>/Defs/ThingDef[defName="Joy_PunchingBag"]</xpath>
       <value>
         <researchPrerequisites>
-            <li>Ferny_PunchingBag</li>
+            <li>Ferny_TrainingDummy</li>
         </researchPrerequisites>
       </value>
     </nomatch>

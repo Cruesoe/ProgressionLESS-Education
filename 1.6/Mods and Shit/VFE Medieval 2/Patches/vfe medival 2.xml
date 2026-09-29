@@ -32,7 +32,7 @@
  <xpath>/Defs/ThingDef[defName="VFEM2_ArcheryTarget"]/researchPrerequisites</xpath>
       <value>
         <researchPrerequisites>
-            <li>Ferny_ArcheryStation</li>
+            <li>Ferny_TrainingDummy</li>
         </researchPrerequisites>
       </value>
     </match>
@@ -40,7 +40,7 @@
       <xpath>/Defs/ThingDef[defName="VFEM2_ArcheryTarget"]</xpath>
       <value>
         <researchPrerequisites>
-            <li>Ferny_ArcheryStation</li>
+            <li>Ferny_TrainingDummy</li>
         </researchPrerequisites>
       </value>
     </nomatch>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+	<ResearchProjectDef MayRequireAnyOf="OskarPotocki.VFE.Medieval2,VanillaExpanded.VFECore">
+		<defName>Ferny_TrainingDummy</defName>
+		<label>training equipment</label>
+		<description>Build punching bags, training dummies and archery targets to train melee and shooting skills.</description>
+		<baseCost>350</baseCost>
+		<researchViewX>1.00</researchViewX>
+		<researchViewY>1.00</researchViewY>
+		<tab>Education_Tab</tab>
+		<techLevel>Medieval</techLevel>
+		<tags>
+			<li>ClassicStart</li>
+		</tags>
+		<prerequisites>
+			<li>Ferny_NeolithicEducation</li>
+		</prerequisites>
+	</ResearchProjectDef>
+</Defs>
