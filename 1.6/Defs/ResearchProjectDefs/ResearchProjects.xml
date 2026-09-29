@@ -111,7 +111,7 @@
 		<baseCost>450</baseCost>
 		<prerequisites>
 			<li>Ferny_NeolithicEducation</li>
-			<li MayRequire="ferny.progressionfurniture">Ferny_Tables</li>
+			<li MayRequireAnyOf="ferny.progressionfurniture,cruesoe.progressionlessfurniture">Ferny_Tables</li>
 		</prerequisites>
 		<researchViewX>1</researchViewX>
 		<researchViewY>1</researchViewY>
