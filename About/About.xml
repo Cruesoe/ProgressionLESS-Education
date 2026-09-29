@@ -3,7 +3,12 @@
     <name>ProgressionLESS: Education</name>
     <author>Cruesoe</author>
     <packageId>cruesoe.progressionlesseducation</packageId>
-    <description>An education system.
+    <modVersion>260929</modVersion>
+    <description>All the Progression goodness, less research.
+
+An education system: teach classes, train skills and earn proficiencies.
+
+The "LESS" is less research: Progression: Education adds up to 14 research projects depending on your mods. This fork groups them into at most 8, such as Classrooms, Training equipment, Electric classrooms and Spacer classrooms. Everything stays in the same era, and still needs the other research it did before.
 
 Forked from Progression: Education by ferny.
 Huge thanks to ferny for the original mod and all the Progression work this builds on. Replaces the original; do not use both.
