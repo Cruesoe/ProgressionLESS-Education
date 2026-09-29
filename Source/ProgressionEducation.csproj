@@ -11,14 +11,14 @@
 
     <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|AnyCPU'">
         <Optimize>true</Optimize>
-        <OutputPath>..\Assemblies\</OutputPath>
+        <OutputPath>..\1.6\Assemblies\</OutputPath>
         <DefineConstants>TRACE</DefineConstants>
         <DebugType>none</DebugType>
     </PropertyGroup>
 
     <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
         <Optimize>false</Optimize>
-        <OutputPath>..\Assemblies\</OutputPath>
+        <OutputPath>..\1.6\Assemblies\</OutputPath>
         <DefineConstants>DEBUG;TRACE</DefineConstants>
         <DebugType>portable</DebugType>
     </PropertyGroup>
@@ -42,10 +42,6 @@
             <IncludeAssets>compile; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
         </PackageReference>
     </ItemGroup>
-    <PropertyGroup>
-
-        <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
-    </PropertyGroup>
     <ItemGroup>
         <Publicize Include="Assembly-CSharp" />
     </ItemGroup>

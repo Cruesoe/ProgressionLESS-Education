@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+  <!-- Other mods' content that optionally requires Progression: Education requires this fork instead -->
+  <Operation Class="PatchOperationAttributeSet">
+    <success>Always</success>
+    <xpath>Defs//*[translate(@MayRequire,'ABCDEFGHIJKLMNOPQRSTUVWXYZ','abcdefghijklmnopqrstuvwxyz')="ferny.progressioneducation"]</xpath>
+    <attribute>MayRequire</attribute>
+    <value>cruesoe.progressionlesseducation</value>
+  </Operation>
+
+  <Operation Class="PatchOperationAttributeSet">
+    <success>Always</success>
+    <xpath>Defs//*[translate(@MayRequire,'ABCDEFGHIJKLMNOPQRSTUVWXYZ','abcdefghijklmnopqrstuvwxyz')="ferny.progressioneducation,smashphil.vehicleframework"]</xpath>
+    <attribute>MayRequire</attribute>
+    <value>cruesoe.progressionlesseducation,SmashPhil.VehicleFramework</value>
+  </Operation>
+
+  <Operation Class="PatchOperationAttributeSet">
+    <success>Always</success>
+    <xpath>Defs//*[translate(@MayRequire,'ABCDEFGHIJKLMNOPQRSTUVWXYZ','abcdefghijklmnopqrstuvwxyz')="ferny.progressioneducation,ludeon.rimworld.odyssey"]</xpath>
+    <attribute>MayRequire</attribute>
+    <value>cruesoe.progressionlesseducation,ludeon.rimworld.odyssey</value>
+  </Operation>
+
+  <!-- Character Creator: progression module is available with this fork; does nothing without Character Creator -->
+  <Operation Class="PatchOperationAdd">
+    <success>Always</success>
+    <xpath>Defs/MCE.EditorModuleDef[defName="MCE_Progression"]/requiresAnyPackageId</xpath>
+    <value>
+      <li>cruesoe.progressionlesseducation</li>
+    </value>
+  </Operation>
+
+</Patch>

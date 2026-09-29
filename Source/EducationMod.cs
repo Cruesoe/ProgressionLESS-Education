@@ -13,7 +13,7 @@ public class EducationMod : Mod
         settings = GetSettings<EducationSettings>();
         LongEventHandler.ExecuteWhenFinished(delegate
         {
-            new Harmony("ProgressionEducationMod").PatchAll();
+            new Harmony("cruesoe.progressionlesseducation").PatchAll();
         });
     }
 

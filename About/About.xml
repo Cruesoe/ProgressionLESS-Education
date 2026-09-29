@@ -1,9 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <ModMetaData>
-    <name>Progression: Education</name>
-    <author>ferny</author>
-    <packageId>ferny.ProgressionEducation</packageId>
-    <description>An education system.</description>
+    <name>ProgressionLESS: Education</name>
+    <author>Cruesoe</author>
+    <packageId>cruesoe.progressionlesseducation</packageId>
+    <description>An education system.
+
+Forked from Progression: Education by ferny.
+Huge thanks to ferny for the original mod and all the Progression work this builds on. Replaces the original; do not use both.
+
+For a really good modpack, check out The Progression Modpack on the Steam Workshop.</description>
     <supportedVersions>
         <li>1.6</li>
     </supportedVersions>
@@ -26,6 +31,7 @@
         </li>
     </modDependencies>
     <incompatibleWith>
+        <li>ferny.ProgressionEducation</li>
         <li>dame.arcanetechnology</li>
         <li>konstantynopolitaneczka.choosethelesson</li>
         <li>carnysenpai.enableoversizedweapons</li>

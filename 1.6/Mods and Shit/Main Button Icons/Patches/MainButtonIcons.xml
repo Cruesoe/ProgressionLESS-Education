@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+	<!-- Bradson's Main Button Icons: education tab icon; the mod only applies it for ferny's package ID -->
+	<Operation Class="PatchOperationConditional">
+		<success>Always</success>
+		<xpath>/Defs/MainButtonDef[defName="PE_Education"]/iconPath</xpath>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>/Defs/MainButtonDef[defName="PE_Education"]</xpath>
+			<value>
+				<iconPath>UI/Buttons/MainButtons/Classrooms</iconPath>
+			</value>
+		</nomatch>
+		<match Class="PatchOperationReplace">
+			<xpath>/Defs/MainButtonDef[defName="PE_Education"]/iconPath</xpath>
+			<value>
+				<iconPath>UI/Buttons/MainButtons/Classrooms</iconPath>
+			</value>
+		</match>
+	</Operation>
+
+</Patch>
