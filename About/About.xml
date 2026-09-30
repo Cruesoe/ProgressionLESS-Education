@@ -95,4 +95,8 @@ For a really good modpack, check out The Progression Modpack on the Steam Worksh
         <li>rer.gravshiploanscenario</li>
 
     </loadAfter>
+    <loadBefore>
+        <li>ferny.ProgressionTherapy</li>
+        <li>ferny.BetterArchitect</li>
+    </loadBefore>
 </ModMetaData>
