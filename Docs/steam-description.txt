@@ -1,11 +1,10 @@
-[h1]ProgressionLESS: Education[/h1]
 [b]All the Progression goodness, less research.[/b]
 
 [i]This is a fork of [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3590863552]Progression: Education[/url] by ferny. Huge thanks to ferny for the original mod and all the Progression work this builds on. For a really good modpack, check out [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3521297585]The Progression Modpack[/url].[/i]
 
-[h2]What it does[/h2]
+[h2]Features[/h2]
 [list]
-[*]Adds an education system: set up classrooms, schedule classes, and have teachers train skills and proficiencies.
+[*]Adds an education system where you set up classrooms, schedule classes and have teachers train skills and proficiencies.
 [*]Classes range from daycare for children to skill lessons, with training buildings for melee and shooting.
 [*]Everything is managed from the Education tab.
 [/list]
@@ -13,23 +12,26 @@
 [h2]Why "LESS"?[/h2]
 Progression: Education adds up to [b]14 research projects[/b] depending on your mods. This fork groups them into [b]at most 8[/b]:
 [list]
-[*][b]Neolithic:[/b] Education, Rough crib
-[*][b]Medieval:[/b] Classrooms, Training equipment
-[*][b]Industrial:[/b] Whiteboards, Electric classrooms, Firearm station
-[*][b]Spacer:[/b] Spacer classrooms
+[*][b]Education[/b] and [b]Rough crib[/b] (Neolithic)
+[*][b]Classrooms[/b] and [b]Training equipment[/b] (Medieval)
+[*][b]Whiteboards[/b], [b]Electric classrooms[/b] and [b]Firearm station[/b] (Industrial)
+[*][b]Spacer classrooms[/b] (Spacer)
 [/list]
 Everything stays in the same era, and still needs the other research it did before. The Education tab is laid out as one clear teaching chain.
 
 [h2]Compatibility[/h2]
-Keeps all of the original's mod support, including:
+Keeps all of the original's mod support:
 [list]
-[*]Royalty, Biotech and Odyssey
-[*]Medieval Overhaul, VFE Medieval 2, VFE Tribals, VFE Pirates and VFE Settlers
-[*]Vanilla Cooking, Brewing, Furniture, Weapons, Psycasts, Vehicles and Gravship Expanded, VFE Farming and VFE Production
-[*]VQE Ancients, Ancient Urban Ruins, Famine Food and Megafauna Bestiary
-[*]Progression: Agriculture, Progression: Scenarios, and both Progression: Furniture and ProgressionLESS: Furniture
-[*]Character Development, Character Creator, Better Architect, Node Research and Bradson's Main Button Icons
-[*]Several faction and scenario mods, including Samurai Faction, Satyr/Faun and Minotaur Expanded, Rimfather, Brave New Frontier, Orbital Station Start and Debt-Bound Gravship
+[*]It works with Royalty, Biotech and Odyssey.
+[*]It works with Medieval Overhaul, VFE Medieval 2, VFE Tribals, VFE Pirates and VFE Settlers.
+[*]It works with Vanilla Cooking, Brewing, Furniture, Weapons, Psycasts, Vehicles and Gravship Expanded, VFE Farming and VFE Production.
+[*]It works with VQE Ancients, Ancient Urban Ruins, Famine Food and Megafauna Bestiary.
+[*]It works with Progression: Agriculture, Progression: Scenarios, and both Progression: Furniture and ProgressionLESS: Furniture.
+[*]It works with Character Development, Character Creator, Better Architect, Node Research and Bradson's Main Button Icons.
+[*]It works with several faction and scenario mods, including Samurai Faction, Satyr/Faun and Minotaur Expanded, Rimfather, Brave New Frontier, Orbital Station Start and Debt-Bound Gravship.
+[*]Under Combat Extended, the training rifle, bow and charge rifle stay as vanilla training weapons.
 [/list]
 
 [b]Replaces the original. Don't use both.[/b]
+
+[b]Switching mid-game isn't recommended.[/b] Many of the original's research projects are merged, so swapping Progression: Education for this fork in an existing save can lose research progress. Start a new game when you switch.
