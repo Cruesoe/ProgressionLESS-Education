@@ -1,47 +1,94 @@
 <loadFolders>
   <v1.6>
     <li>/</li>
-    <li IfModActive="xmb.ancienturbanruins.mo">1.6/Mods and Shit/Ancient Urban Ruins</li>
-    <li IfModActive="van.foodfamine">1.6/Mods and Shit/Famine Food</li>
-    <li IfModActive="dankpyon.medieval.overhaul">1.6/Mods and Shit/Medieval Overhaul</li>
-    <li IfModActive="vanillaexpanded.vcookehaute">1.6/Mods and Shit/VCE Haute</li>
-    <li IfModActive="vanillaexpanded.vcookesushi">1.6/Mods and Shit/VCE Sushi</li>
-    <li IfModActive="vanillaexpanded.vbrewe">1.6/Mods and Shit/VE Brewing</li>
-    <li IfModActive="vanillaexpanded.vcooke">1.6/Mods and Shit/VE Cooking</li>
-    <li IfModActive="vanillaexpanded.gravship">1.6/Mods and Shit/VE Gravships</li>
-    <li IfModActive="vanillaexpanded.gravship2">1.6/Mods and Shit/VE Gravship Chapter 2</li>
-    <li IfModActive="vanillaexpanded.vfefarming">1.6/Mods and Shit/VFE Farming</li>
-    <li IfModActive="vanillaexpanded.vfeproduction">1.6/Mods and Shit/VFE Production</li>
-    <li IfModActive="oskarpotocki.vfe.tribals">1.6/Mods and Shit/VFE Tribals</li>
-    <li IfModActive="ferny.progressionagriculture">1.6/Mods and Shit/Progression Agriculture</li>
-    <li IfModActive="vanillaexpanded.vfecore">1.6/Mods and Shit/VE Furniture</li>
-    <li IfModActive="oskarpotocki.vfe.medieval2">1.6/Mods and Shit/VFE Medieval 2</li>
-    <li IfModActive="vanillaexpanded.vwe">1.6/Mods and Shit/VE Weapons</li>
-    <li IfModActive="vanillaexpanded.vcookebakery">1.6/Mods and Shit/VCE Bakery</li>
-    <li IfModActive="oskarpotocki.vfe.pirates">1.6/Mods and Shit/VFE Pirates</li>
-    <li IfModActive="ludeon.rimworld.odyssey">1.6/Mods and Shit/Odyssey</li>
-    <li IfModActive="ferny.progressionscenarios">1.6/Mods and Shit/Progression Scenarios</li>
-    <li IfModActive="ludeon.rimworld.biotech">1.6/Mods and Shit/Biotech</li>
-    <li IfModActive="tug.minotaur.expanded">1.6/Mods and Shit/Roo Minotaur Expanded</li>
-    <li IfModActive="veterano.mythicages.megafaunabestiary">1.6/Mods and Shit/Megafauna Bestiary</li>
-    <li IfModActive="vanillaexpanded.vpsycastse">1.6/Mods and Shit/VE Psycasts</li>
-    <li IfModActive="vanillaquestsexpanded.ancients">1.6/Mods and Shit/VQE Ancients</li>
-    <li IfModActive="tug.satyrfaun.expanded">1.6/Mods and Shit/Roo SFE</li>
-    <li IfModActive="trickity.samurai.faction">1.6/Mods and Shit/T Samurai Faction</li>
-    <li IfModActive="oskarpotocki.vanillafactionsexpanded.settlersmodule">1.6/Mods and Shit/VFE Settlers</li>
-    <li IfModActive="Ludeon.RimWorld.Royalty">1.6/Mods and Shit/Royalty</li>
-    <li IfModActive="RF.LUNARTIKAAA">1.6/Mods and Shit/Rimfather</li>
-    <li IfModActive="kp.bravenewfrontier">1.6/Mods and Shit/Brave New Frontier</li>
-    <li IfModActive="oskarpotocki.vanillavehiclesexpanded">1.6/Mods and Shit/VE Vehicles</li>
-    <li IfModActive="rer.gravshiploanscenario">1.6/Mods and Shit/Debt-Bound Gravship</li>
-    <li IfModActive="alt4s.OrbitalStationStart">1.6/Mods and Shit/Orbital Station Start</li>
-    <li IfModActive="ferny.BetterArchitect">1.6/Mods and Shit/Better Architect</li>
-    <li IfModActive="ferny.noderesearch">1.6/Mods and Shit/Node Research</li>
-    <li IfModActive="bs.mbifvte">1.6/Mods and Shit/Main Button Icons</li>
-    <li IfModActive="CETeam.CombatExtended">1.6/Mods and Shit/Combat Extended</li>
-    <!-- <li IfModActive="Collapse.DunesOfRim.Atreides">1.6/Mods and Shit/DunesOfRim Atreides</li>
-    <li IfModActive="Collapse.DunesOfRim.Harkonnen">1.6/Mods and Shit/DunesOfRim Harkonnen</li>
-    <li IfModActive="Collapse.DunesOfRim.Fremen">1.6/Mods and Shit/DunesOfRim Fremen</li> -->
+    <li IfModActive="xmb.ancienturbanruins.mo">Common/Mods and Shit/Ancient Urban Ruins</li>
+    <li IfModActive="van.foodfamine">Common/Mods and Shit/Famine Food</li>
+    <li IfModActive="dankpyon.medieval.overhaul">Common/Mods and Shit/Medieval Overhaul</li>
+    <li IfModActive="vanillaexpanded.vcookehaute">Common/Mods and Shit/VCE Haute</li>
+    <li IfModActive="vanillaexpanded.vcookesushi">Common/Mods and Shit/VCE Sushi</li>
+    <li IfModActive="vanillaexpanded.vbrewe">Common/Mods and Shit/VE Brewing</li>
+    <li IfModActive="vanillaexpanded.vcooke">Common/Mods and Shit/VE Cooking</li>
+    <li IfModActive="vanillaexpanded.gravship">Common/Mods and Shit/VE Gravships</li>
+    <li IfModActive="vanillaexpanded.gravship2">Common/Mods and Shit/VE Gravship Chapter 2</li>
+    <li IfModActive="vanillaexpanded.vfefarming">Common/Mods and Shit/VFE Farming</li>
+    <li IfModActive="vanillaexpanded.vfeproduction">Common/Mods and Shit/VFE Production</li>
+    <li IfModActive="oskarpotocki.vfe.tribals">Common/Mods and Shit/VFE Tribals</li>
+    <li IfModActive="ferny.progressionagriculture">Common/Mods and Shit/Progression Agriculture</li>
+    <li IfModActive="vanillaexpanded.vfecore">Common/Mods and Shit/VE Furniture</li>
+    <li IfModActive="oskarpotocki.vfe.medieval2">Common/Mods and Shit/VFE Medieval 2</li>
+    <li IfModActive="vanillaexpanded.vwe">Common/Mods and Shit/VE Weapons</li>
+    <li IfModActive="vanillaexpanded.vcookebakery">Common/Mods and Shit/VCE Bakery</li>
+    <li IfModActive="oskarpotocki.vfe.pirates">Common/Mods and Shit/VFE Pirates</li>
+    <li IfModActive="ludeon.rimworld.odyssey">Common/Mods and Shit/Odyssey</li>
+    <li IfModActive="ferny.progressionscenarios">Common/Mods and Shit/Progression Scenarios</li>
+    <li IfModActive="ludeon.rimworld.biotech">Common/Mods and Shit/Biotech</li>
+    <li IfModActive="tug.minotaur.expanded">Common/Mods and Shit/Roo Minotaur Expanded</li>
+    <li IfModActive="veterano.mythicages.megafaunabestiary">Common/Mods and Shit/Megafauna Bestiary</li>
+    <li IfModActive="vanillaexpanded.vpsycastse">Common/Mods and Shit/VE Psycasts</li>
+    <li IfModActive="vanillaquestsexpanded.ancients">Common/Mods and Shit/VQE Ancients</li>
+    <li IfModActive="tug.satyrfaun.expanded">Common/Mods and Shit/Roo SFE</li>
+    <li IfModActive="trickity.samurai.faction">Common/Mods and Shit/T Samurai Faction</li>
+    <li IfModActive="oskarpotocki.vanillafactionsexpanded.settlersmodule">Common/Mods and Shit/VFE Settlers</li>
+    <li IfModActive="Ludeon.RimWorld.Royalty">Common/Mods and Shit/Royalty</li>
+    <li IfModActive="RF.LUNARTIKAAA">Common/Mods and Shit/Rimfather</li>
+    <li IfModActive="kp.bravenewfrontier">Common/Mods and Shit/Brave New Frontier</li>
+    <li IfModActive="oskarpotocki.vanillavehiclesexpanded">Common/Mods and Shit/VE Vehicles</li>
+    <li IfModActive="rer.gravshiploanscenario">Common/Mods and Shit/Debt-Bound Gravship</li>
+    <li IfModActive="alt4s.OrbitalStationStart">Common/Mods and Shit/Orbital Station Start</li>
+    <li IfModActive="ferny.BetterArchitect">Common/Mods and Shit/Better Architect</li>
+    <li IfModActive="ferny.noderesearch">Common/Mods and Shit/Node Research</li>
+    <li IfModActive="bs.mbifvte">Common/Mods and Shit/Main Button Icons</li>
+    <li IfModActive="CETeam.CombatExtended">Common/Mods and Shit/Combat Extended</li>
+    <!-- <li IfModActive="Collapse.DunesOfRim.Atreides">Common/Mods and Shit/DunesOfRim Atreides</li>
+    <li IfModActive="Collapse.DunesOfRim.Harkonnen">Common/Mods and Shit/DunesOfRim Harkonnen</li>
+    <li IfModActive="Collapse.DunesOfRim.Fremen">Common/Mods and Shit/DunesOfRim Fremen</li> -->
+    <li>Common</li>
     <li>1.6</li>
   </v1.6>
+  <v1.7>
+    <li>/</li>
+    <li IfModActive="xmb.ancienturbanruins.mo">Common/Mods and Shit/Ancient Urban Ruins</li>
+    <li IfModActive="van.foodfamine">Common/Mods and Shit/Famine Food</li>
+    <li IfModActive="dankpyon.medieval.overhaul">Common/Mods and Shit/Medieval Overhaul</li>
+    <li IfModActive="vanillaexpanded.vcookehaute">Common/Mods and Shit/VCE Haute</li>
+    <li IfModActive="vanillaexpanded.vcookesushi">Common/Mods and Shit/VCE Sushi</li>
+    <li IfModActive="vanillaexpanded.vbrewe">Common/Mods and Shit/VE Brewing</li>
+    <li IfModActive="vanillaexpanded.vcooke">Common/Mods and Shit/VE Cooking</li>
+    <li IfModActive="vanillaexpanded.gravship">Common/Mods and Shit/VE Gravships</li>
+    <li IfModActive="vanillaexpanded.gravship2">Common/Mods and Shit/VE Gravship Chapter 2</li>
+    <li IfModActive="vanillaexpanded.vfefarming">Common/Mods and Shit/VFE Farming</li>
+    <li IfModActive="vanillaexpanded.vfeproduction">Common/Mods and Shit/VFE Production</li>
+    <li IfModActive="oskarpotocki.vfe.tribals">Common/Mods and Shit/VFE Tribals</li>
+    <li IfModActive="ferny.progressionagriculture">Common/Mods and Shit/Progression Agriculture</li>
+    <li IfModActive="vanillaexpanded.vfecore">Common/Mods and Shit/VE Furniture</li>
+    <li IfModActive="oskarpotocki.vfe.medieval2">Common/Mods and Shit/VFE Medieval 2</li>
+    <li IfModActive="vanillaexpanded.vwe">Common/Mods and Shit/VE Weapons</li>
+    <li IfModActive="vanillaexpanded.vcookebakery">Common/Mods and Shit/VCE Bakery</li>
+    <li IfModActive="oskarpotocki.vfe.pirates">Common/Mods and Shit/VFE Pirates</li>
+    <li IfModActive="ludeon.rimworld.odyssey">Common/Mods and Shit/Odyssey</li>
+    <li IfModActive="ferny.progressionscenarios">Common/Mods and Shit/Progression Scenarios</li>
+    <li IfModActive="ludeon.rimworld.biotech">Common/Mods and Shit/Biotech</li>
+    <li IfModActive="tug.minotaur.expanded">Common/Mods and Shit/Roo Minotaur Expanded</li>
+    <li IfModActive="veterano.mythicages.megafaunabestiary">Common/Mods and Shit/Megafauna Bestiary</li>
+    <li IfModActive="vanillaexpanded.vpsycastse">Common/Mods and Shit/VE Psycasts</li>
+    <li IfModActive="vanillaquestsexpanded.ancients">Common/Mods and Shit/VQE Ancients</li>
+    <li IfModActive="tug.satyrfaun.expanded">Common/Mods and Shit/Roo SFE</li>
+    <li IfModActive="trickity.samurai.faction">Common/Mods and Shit/T Samurai Faction</li>
+    <li IfModActive="oskarpotocki.vanillafactionsexpanded.settlersmodule">Common/Mods and Shit/VFE Settlers</li>
+    <li IfModActive="Ludeon.RimWorld.Royalty">Common/Mods and Shit/Royalty</li>
+    <li IfModActive="RF.LUNARTIKAAA">Common/Mods and Shit/Rimfather</li>
+    <li IfModActive="kp.bravenewfrontier">Common/Mods and Shit/Brave New Frontier</li>
+    <li IfModActive="oskarpotocki.vanillavehiclesexpanded">Common/Mods and Shit/VE Vehicles</li>
+    <li IfModActive="rer.gravshiploanscenario">Common/Mods and Shit/Debt-Bound Gravship</li>
+    <li IfModActive="alt4s.OrbitalStationStart">Common/Mods and Shit/Orbital Station Start</li>
+    <li IfModActive="ferny.BetterArchitect">Common/Mods and Shit/Better Architect</li>
+    <li IfModActive="ferny.noderesearch">Common/Mods and Shit/Node Research</li>
+    <li IfModActive="bs.mbifvte">Common/Mods and Shit/Main Button Icons</li>
+    <li IfModActive="CETeam.CombatExtended">Common/Mods and Shit/Combat Extended</li>
+    <!-- <li IfModActive="Collapse.DunesOfRim.Atreides">Common/Mods and Shit/DunesOfRim Atreides</li>
+    <li IfModActive="Collapse.DunesOfRim.Harkonnen">Common/Mods and Shit/DunesOfRim Harkonnen</li>
+    <li IfModActive="Collapse.DunesOfRim.Fremen">Common/Mods and Shit/DunesOfRim Fremen</li> -->
+    <li>Common</li>
+    <li>1.7</li>
+  </v1.7>
 </loadFolders>

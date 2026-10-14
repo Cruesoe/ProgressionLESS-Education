@@ -256,7 +256,7 @@ public class Window_ColorPicker : Window
         color = Color.white;
         if (hex.StartsWith("#"))
         {
-            hex = hex[1..];
+            hex = hex.Substring(1);
         }
 
         if (hex.Length is not 6 and not 8)
@@ -266,7 +266,7 @@ public class Window_ColorPicker : Window
 
         try
         {
-            var r = int.Parse(hex[..2], NumberStyles.HexNumber);
+            var r = int.Parse(hex.Substring(0, 2), NumberStyles.HexNumber);
             var g = int.Parse(hex.Substring(2, 2),
                 NumberStyles.HexNumber);
             var b = int.Parse(hex.Substring(4, 2),
