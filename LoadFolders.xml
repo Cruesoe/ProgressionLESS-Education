@@ -13,6 +13,7 @@
     <li IfModActive="vanillaexpanded.vfefarming">Common/Mods and Shit/VFE Farming</li>
     <li IfModActive="vanillaexpanded.vfeproduction">Common/Mods and Shit/VFE Production</li>
     <li IfModActive="oskarpotocki.vfe.tribals">Common/Mods and Shit/VFE Tribals</li>
+    <li IfModActiveAll="dankpyon.medieval.overhaul,oskarpotocki.vfe.tribals">Common/Mods and Shit/Medieval Overhaul + VFE Tribals</li>
     <li IfModActive="ferny.progressionagriculture">Common/Mods and Shit/Progression Agriculture</li>
     <li IfModActive="vanillaexpanded.vfecore">Common/Mods and Shit/VE Furniture</li>
     <li IfModActive="oskarpotocki.vfe.medieval2">Common/Mods and Shit/VFE Medieval 2</li>
@@ -59,6 +60,7 @@
     <li IfModActive="vanillaexpanded.vfefarming">Common/Mods and Shit/VFE Farming</li>
     <li IfModActive="vanillaexpanded.vfeproduction">Common/Mods and Shit/VFE Production</li>
     <li IfModActive="oskarpotocki.vfe.tribals">Common/Mods and Shit/VFE Tribals</li>
+    <li IfModActiveAll="dankpyon.medieval.overhaul,oskarpotocki.vfe.tribals">Common/Mods and Shit/Medieval Overhaul + VFE Tribals</li>
     <li IfModActive="ferny.progressionagriculture">Common/Mods and Shit/Progression Agriculture</li>
     <li IfModActive="vanillaexpanded.vfecore">Common/Mods and Shit/VE Furniture</li>
     <li IfModActive="oskarpotocki.vfe.medieval2">Common/Mods and Shit/VFE Medieval 2</li>
