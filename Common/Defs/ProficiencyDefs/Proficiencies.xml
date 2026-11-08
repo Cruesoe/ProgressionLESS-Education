@@ -103,7 +103,7 @@
 
   <ProgressionEducation.ProficiencyTierDef>
     <defName>PE_MuteTier</defName>
-    <label>mute</label>
+    <label>non-speaker</label>
     <traitDef>PE_MuteProficiency</traitDef>
     <iconPath>UI/ProficiencyIcons/Speech/SpeechIncapable</iconPath>
     <isDefaultChild>true</isDefaultChild>

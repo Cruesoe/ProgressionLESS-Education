@@ -94,11 +94,11 @@
   <TraitDef>
     <defName>PE_MuteProficiency</defName>
     <commonality>0</commonality>
-    <label>mute</label>
+    <label>non-speaker</label>
     <degreeDatas>
       <li>
-        <label>mute</label>
-        <description>This person has no understanding of language.</description>
+        <label>non-speaker</label>
+        <description>This person does not know common language.</description>
         <statFactors>
           <SocialImpact>0</SocialImpact>
           <NegotiationAbility>0</NegotiationAbility>
