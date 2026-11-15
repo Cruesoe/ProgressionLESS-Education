@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Patch>
 
-  <Operation Class="PatchOperationFindMod">
-    <mods>
-      <li>Vanilla Factions Expanded - Medieval 2</li>
-    </mods>
+  <!-- VFE Medieval 2's matchlocks project grants firearm proficiency when it exists, otherwise gunsmithing does -->
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/ResearchProjectDef[defName="VFEM2_Matchlocks"]</xpath>
     <match Class="PatchOperationAddModExtension">
       <xpath>Defs/ResearchProjectDef[defName="VFEM2_Matchlocks"]</xpath>
       <value>

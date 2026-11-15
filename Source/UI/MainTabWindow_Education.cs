@@ -125,7 +125,6 @@ public class MainTabWindow_Education : MainTabWindow
         var suspendTooltip = studyGroup.suspended
             ? "PE_ResumeClass".Translate()
             : "PE_SuspendClass".Translate();
-        GUI.DrawTexture(suspendButtonRect, suspendIcon);
         TooltipHandler.TipRegion(suspendButtonRect, suspendTooltip);
         if (Widgets.ButtonImage(suspendButtonRect, suspendIcon))
         {
@@ -164,7 +163,7 @@ public class MainTabWindow_Education : MainTabWindow
             return;
         }
 
-        var totalHeight = studyGroups.Count * ClassRowHeight;
+        var totalHeight = studyGroups.Count * (ClassRowHeight + WindowPadding);
         var listContentRect =
             new Rect(0f, 0f, listOutRect.width - 16f, totalHeight);
         Widgets.BeginScrollView(listOutRect, ref classScrollPosition,

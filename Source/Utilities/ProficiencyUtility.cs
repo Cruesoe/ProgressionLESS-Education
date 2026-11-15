@@ -14,6 +14,7 @@ public static class ProficiencyUtility
 {
     private static readonly Dictionary<ThingDef, TechLevel> cachedTechLevelValues = new();
     private static readonly Dictionary<object, ProficiencyTierDef> cachedVehicleTiers = new();
+    private static Dictionary<TraitDef, ProficiencyDef> cachedTrackByTrait;
     private static FieldInfo roleField;
     private static FieldInfo handlerField;
     private static FieldInfo vehicleField;
@@ -21,7 +22,7 @@ public static class ProficiencyUtility
     private static readonly Texture2D CircleBrightTex = ContentFinder<Texture2D>.Get("UI/CircleBright");
     private static readonly Texture2D CircleDarkTex = ContentFinder<Texture2D>.Get("UI/CircleDark");
 
-    public static bool AreVehicleModsActive => ModsConfig.OdysseyActive || ModsConfig.IsActive("MemeGoddess.GiddyUp") || ModsConfig.IsActive("SmashPhil.VehicleFramework");
+    public static readonly bool AreVehicleModsActive = ModsConfig.OdysseyActive || ModsConfig.IsActive("MemeGoddess.GiddyUp") || ModsConfig.IsActive("SmashPhil.VehicleFramework");
 
     public static bool CanHaveProficiencies(this Pawn pawn)
     {
@@ -420,7 +421,28 @@ public static class ProficiencyUtility
 
     public static bool IsProficiencyTrait(TraitDef def)
     {
-        return DefDatabase<ProficiencyDef>.AllDefsListForReading.Any(track => track.tiers.Any(t => t.traitDef == def));
+        return TrackFor(def) != null;
+    }
+
+    // Proficiency track owning a trait, or null; built once since defs don't change after load
+    public static ProficiencyDef TrackFor(TraitDef def)
+    {
+        if (cachedTrackByTrait == null)
+        {
+            cachedTrackByTrait = new Dictionary<TraitDef, ProficiencyDef>();
+            foreach (var track in DefDatabase<ProficiencyDef>.AllDefsListForReading)
+            {
+                foreach (var tier in track.tiers)
+                {
+                    if (tier.traitDef != null && !cachedTrackByTrait.ContainsKey(tier.traitDef))
+                    {
+                        cachedTrackByTrait[tier.traitDef] = track;
+                    }
+                }
+            }
+        }
+
+        return def != null && cachedTrackByTrait.TryGetValue(def, out var result) ? result : null;
     }
 
     public static bool IsTrackEnabled(ProficiencyDef track)

@@ -11,6 +11,11 @@ public static class JoyGiver_GetSearchSet_Patch
 {
     public static void Postfix(Pawn pawn, List<Thing> outCandidates)
     {
+        if (!TimeAssignmentUtility.AnyRestrictedClassroom())
+        {
+            return;
+        }
+
         outCandidates.RemoveAll(thing =>
         {
             if (thing is Building building)

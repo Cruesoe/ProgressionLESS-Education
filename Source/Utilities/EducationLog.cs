@@ -4,7 +4,7 @@ namespace ProgressionEducation;
 
 public static class EducationLog
 {
-    private const string Prefix = "[Progression-Education] ";
+    private const string Prefix = "[ProgressionLESS: Education] ";
 
     public static void Error(string text)
     {

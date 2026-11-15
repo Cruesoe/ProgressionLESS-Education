@@ -1,39 +1,62 @@
 using System.Collections.Generic;
-using System.Linq;
 using HarmonyLib;
 using RimWorld;
-using Verse;
 
 namespace ProgressionEducation;
 
 [HarmonyPatch(typeof(TraitSet), "TraitsSorted", MethodType.Getter)]
 public static class TraitSet_TraitsSorted_Patch
 {
+    // Scratch list reused on every call, as the vanilla getter does
+    private static readonly List<Trait> filtered = [];
+
     public static void Postfix(ref List<Trait> __result)
     {
-        if (__result == null) return;
-
-        __result = __result.Where(t =>
+        if (__result == null)
         {
-            if (!EducationMod.settings.enableProficiencySystem && ProficiencyUtility.IsProficiencyTrait(t.def))
-            {
-                return false;
-            }
+            return;
+        }
 
-            if (EducationMod.settings.enableKnowledgePanel && ProficiencyUtility.IsProficiencyTrait(t.def))
+        var anyHidden = false;
+        for (var i = 0; i < __result.Count; i++)
+        {
+            if (ShouldHide(__result[i]))
             {
-                return false;
+                anyHidden = true;
+                break;
             }
+        }
 
-            foreach (var track in DefDatabase<ProficiencyDef>.AllDefsListForReading)
+        if (!anyHidden)
+        {
+            return;
+        }
+
+        filtered.Clear();
+        for (var i = 0; i < __result.Count; i++)
+        {
+            if (!ShouldHide(__result[i]))
             {
-                if (track.tiers.Any(tier => tier.traitDef == t.def))
-                {
-                    return ProficiencyUtility.IsTrackEnabled(track);
-                }
+                filtered.Add(__result[i]);
             }
+        }
 
+        __result = filtered;
+    }
+
+    private static bool ShouldHide(Trait trait)
+    {
+        var track = ProficiencyUtility.TrackFor(trait.def);
+        if (track == null)
+        {
+            return false;
+        }
+
+        if (!EducationMod.settings.enableProficiencySystem || EducationMod.settings.enableKnowledgePanel)
+        {
             return true;
-        }).ToList();
+        }
+
+        return !ProficiencyUtility.IsTrackEnabled(track);
     }
 }

@@ -15,7 +15,6 @@ public class Dialog_EditClass : Window, IClassDialog
     private readonly PawnClassRoleSelectionWidget participantsDrawer;
     private readonly StudyGroup referenceStudyGroup;
     private readonly StudyGroup studyGroup;
-    private readonly List<ClassSubjectLogic> availableLogics;
 
     private Vector2 scrollPosition = Vector2.zero;
 
@@ -44,8 +43,6 @@ public class Dialog_EditClass : Window, IClassDialog
         {
             studyGroup = studyGroup,
         };
-
-        availableLogics = EducationUtility.GetAvailableSubjectLogics(studyGroup);
 
         closeOnAccept = false;
         closeOnClickedOutside = false;
@@ -115,31 +112,8 @@ public class Dialog_EditClass : Window, IClassDialog
         curY += 30f;
         Widgets.Label(new Rect(viewRect.x, curY, 150f, 25f),
             "PE_Subject".Translate());
-        if (studyGroup.subjectLogic.CanChangeSubject)
-        {
-            if (Widgets.ButtonText(
-                    new Rect(viewRect.x + 160f, curY, 200f, 25f),
-                    studyGroup.subjectLogic.LabelCap))
-            {
-                var options = new List<FloatMenuOption>();
-                foreach (var logic in availableLogics)
-                {
-                    var localLogic = logic;
-                    options.Add(new FloatMenuOption(localLogic.LabelCap, () =>
-                    {
-                        studyGroup.subjectLogic = localLogic;
-                        studyGroup.semesterGoal = localLogic.DefaultSemesterGoal;
-                        studyGroup.subjectLogic.UnassignParticipants(this);
-                    }));
-                }
-                Find.WindowStack.Add(new FloatMenu(options));
-            }
-        }
-        else
-        {
-            Widgets.Label(new Rect(viewRect.x + 160f, curY, 200f, 25f),
-                studyGroup.subjectLogic.LabelCap);
-        }
+        Widgets.Label(new Rect(viewRect.x + 160f, curY, 200f, 25f),
+            studyGroup.subjectLogic.LabelCap);
         curY += 30f;
         studyGroup.subjectLogic.DrawConfigurationUI(viewRect, ref curY,
             this);

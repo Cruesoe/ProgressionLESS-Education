@@ -547,6 +547,7 @@ public class StudyGroup : IExposable, ILoadReferenceable, IRenameable
             var map = thing.Map;
             var sourceMap = map.PocketMapParent?.sourceMap;
             if (sourceMap != null
+                && t_MapParent_Vehicle != null
                 && map.Parent.GetType().SameOrSubclassOf(t_MapParent_Vehicle))
             {
                 return sourceMap;

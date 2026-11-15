@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <!-- VFE Tribals' research spot replaces Medieval Overhaul's researching spot -->
+  <VEF.Buildings.HiddenDesignatorsDef>
+    <defName>ProgressionLESSEducation_MedievalOverhaulVFETribals_HiddenDesignators</defName>
+    <hiddenDesignators>
+      <li>DankPyon_ResearchingSpot</li>
+    </hiddenDesignators>
+  </VEF.Buildings.HiddenDesignatorsDef>
+</Defs>

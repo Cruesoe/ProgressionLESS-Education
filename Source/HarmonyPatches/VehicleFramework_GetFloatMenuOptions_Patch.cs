@@ -9,12 +9,17 @@ namespace ProgressionEducation;
 [HotSwappable]
 public static class VehicleFramework_GetFloatMenuOptions_Patch
 {
+    private static FieldInfo handlersField;
+
     public static bool Prepare() => ModsConfig.IsActive("SmashPhil.VehicleFramework");
+
     public static MethodBase TargetMethod()
     {
         var vehiclePawnType = AccessTools.TypeByName("Vehicles.VehiclePawn");
+        handlersField = AccessTools.Field(vehiclePawnType, "handlers");
         return AccessTools.Method(vehiclePawnType, "GetFloatMenuOptions", new[] { typeof(Pawn) });
     }
+
     public static void Postfix(object __instance, Pawn selPawn, ref IEnumerable<FloatMenuOption> __result)
     {
         if (!EducationMod.settings.enableProficiencySystem || !EducationMod.settings.enableVehicleProficiency)
@@ -22,12 +27,13 @@ public static class VehicleFramework_GetFloatMenuOptions_Patch
             return;
         }
 
-        var list = new List<FloatMenuOption>(__result);
-        var handlersField = AccessTools.Field(__instance.GetType(), "handlers");
-        var handlers = handlersField.GetValue(__instance) as IEnumerable<object>;
-        if (handlers == null) return;
+        if (handlersField?.GetValue(__instance) is not IEnumerable<object> handlers)
+        {
+            return;
+        }
 
-        int idx = 0;
+        var list = new List<FloatMenuOption>(__result);
+        var idx = 0;
         foreach (var handler in handlers)
         {
             if (idx >= list.Count) break;
@@ -35,9 +41,7 @@ public static class VehicleFramework_GetFloatMenuOptions_Patch
             if (!canOperate && !string.IsNullOrEmpty(failReason))
             {
                 var opt = list[idx];
-                string originalLabel = opt.Label;
-                string newLabel = originalLabel.Replace("VF_BoardFailureNonCombatant".Translate(selPawn.LabelShort), failReason);
-                opt.Label = newLabel;
+                opt.Label = opt.Label.Replace("VF_BoardFailureNonCombatant".Translate(selPawn.LabelShort), failReason);
             }
             idx++;
         }

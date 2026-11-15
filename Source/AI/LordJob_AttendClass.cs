@@ -15,6 +15,7 @@ public class LordJob_AttendClass : LordJob
 
     public const string MemoClassCompleted = "ClassCompleted";
     public const string MemoClassTimeFinished = "ClassTimeFinished";
+    private const int ValidateInterval = 60;
 
     public bool classStartedSuccessfully = false;
     public StudyGroup studyGroup;
@@ -208,7 +209,8 @@ public class LordJob_AttendClass : LordJob
             return;
         }
 
-        if (studyGroup.ValidateClassStatus() is { Accepted: false } validationReport)
+        if (Find.TickManager.TicksGame % ValidateInterval == 0
+            && studyGroup.ValidateClassStatus() is { Accepted: false } validationReport)
         {
             EducationLog.Message($"LordJob_AttendClass.LordJobTick Class '{studyGroup.className}' is being cancelled: {validationReport.Reason}");
             Messages.Message(
@@ -231,7 +233,7 @@ public class LordJob_AttendClass : LordJob
 
             var studentRole = studyGroup.GetStudentRole();
             foreach (var student in studyGroup.students
-                         .Where(s => !GatheringsUtility.PawnCanStartOrContinueGathering(s)
+                         .Where(s => GatheringsUtility.PawnCanStartOrContinueGathering(s)
                                      && s.GetLord() == null))
             {
                 if (!studentRole.CanAcceptPawn(student).Accepted)

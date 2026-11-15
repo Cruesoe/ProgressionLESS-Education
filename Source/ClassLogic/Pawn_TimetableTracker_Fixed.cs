@@ -49,7 +49,7 @@ public class Pawn_TimetableTracker_Fixed : IExposable
 
     public TimeAssignmentDef GetAssignment(int hour)
     {
-        return hour is < 0 or > 24
+        return hour is < 0 or >= 24
             ? TimeAssignmentDefOf.Anything
             : times[hour];
     }
