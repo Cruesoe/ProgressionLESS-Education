@@ -17,6 +17,7 @@ public static class CharacterCardUtility_DoLeftSection_Patch
 {
     public static Type sectionType = AccessTools.TypeByName("RimWorld.CharacterCardUtility+LeftRectSection");
     private static FieldInfo rectField = AccessTools.Field(sectionType, "rect");
+    private static FieldInfo drawerField = AccessTools.Field(sectionType, "drawer");
     private static MethodInfo getSkillsColumnHeightMethod;
     private static bool checkedTrauma;
 
@@ -98,8 +99,8 @@ public static class CharacterCardUtility_DoLeftSection_Patch
         if (activeRows == 0) return;
         height += activeRows * 24f;
         var section = Activator.CreateInstance(sectionType);
-        AccessTools.Field(sectionType, "rect").SetValue(section, new Rect(0f, 0f, leftRect.width, height));
-        AccessTools.Field(sectionType, "drawer").SetValue(section, (Action<Rect>)((Rect r) =>
+        rectField.SetValue(section, new Rect(0f, 0f, leftRect.width, height));
+        drawerField.SetValue(section, (Action<Rect>)((Rect r) =>
         {
             var drawingRect = new Rect(r.x, r.y + topGap, r.width, r.height - topGap);
             ProficiencyUtility.DrawKnowledgePanel(drawingRect, pawn);

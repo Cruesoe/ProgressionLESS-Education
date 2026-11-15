@@ -61,20 +61,10 @@ public class JobDriver_AttendMeleeClass : JobDriver_AttendClass
             Rand.Range(60, 120));
     }
 
+    // Holds the bench's training weapon; a generated weapon, since the driver saves it with Scribe_Deep
     public override void InitializeWeapon()
     {
-        if (pawn.EquippedWornOrInventoryThings
-                .Where(thing =>
-                    thing.def.IsMeleeWeapon && EquipmentUtility.CanEquip(thing, pawn))
-                .MaxBy(thing =>
-                    thing.GetStatValueForPawn(StatDefOf.MeleeWeapon_AverageDPS, pawn))
-            is Thing carriedWeapon
-           )
-        {
-            weapon = carriedWeapon;
-        }
-        else if (TargetA.Thing?.TryGetComp<CompWeaponTrainingBench>()?.WeaponDef is ThingDef
-                 weaponDef)
+        if (TargetA.Thing?.TryGetComp<CompWeaponTrainingBench>()?.WeaponDef is ThingDef weaponDef)
         {
             weapon = ThingMaker.MakeThing(weaponDef,
                 GenStuff.DefaultStuffFor(weaponDef));
@@ -87,7 +77,10 @@ public class JobDriver_AttendMeleeClass : JobDriver_AttendClass
         return new Toil
         {
             initAction = () =>
-                ticksUntilNextAction = Rand.Range(60, 120),
+            {
+                ticksUntilNextAction = Rand.Range(60, 120);
+                InitializeWeapon();
+            },
             tickIntervalAction = DoLearningInterval,
             defaultCompleteMode = ToilCompleteMode.Never,
             socialMode = RandomSocialMode.Off,

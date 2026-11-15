@@ -48,21 +48,13 @@
   <PE_TeacherRoleOnlyForAdults>Only adults can be teachers.</PE_TeacherRoleOnlyForAdults>
   <PE_TeacherRoleRequiresSocialSkill>Teachers must have social skills enabled.</PE_TeacherRoleRequiresSocialSkill>
   <PE_ClassCancelled>Class cancelled: {0}</PE_ClassCancelled>
-  <PE_ClassCancelledDesc>The class "{0}" has been cancelled because not all students could make it to class in time.</PE_ClassCancelledDesc>
-  <PE_MissingStudents>Missing students: {0}</PE_MissingStudents>
   <PE_ClassCompleted>Class completed: {0}</PE_ClassCompleted>
   <PE_ClassCompletedDesc>The class "{0}" has successfully completed its semester.</PE_ClassCompletedDesc>
   <PE_ClassGraduates>Graduates: {0}</PE_ClassGraduates>
   <PE_CannotEquipItem>Colonist must be taught {0} proficiency.</PE_CannotEquipItem>
-  <PE_ProficiencyLowTech>Low gear</PE_ProficiencyLowTech>
-  <PE_ProficiencyFirearm>Firearm</PE_ProficiencyFirearm>
-  <PE_ProficiencyHighTech>High-tech</PE_ProficiencyHighTech>
   <PE_StudentNotQualifiedProficiency>{0} does not have the required {1} proficiency.</PE_StudentNotQualifiedProficiency>
-  <PE_StudentAlreadyHasProficiency>{0} already has the required or higher {1} proficiency.</PE_StudentAlreadyHasProficiency>
   <PE_CannotParticipateScheduled>Cannot participate: Scheduled at {0}h - {1}h for the "{2}" class.</PE_CannotParticipateScheduled>
-  <PE_CannotRescheduleScheduled>Cannot reschedule: {0} is already scheduled at {1}h - {2}h for the "{3}" class.</PE_CannotRescheduleScheduled>
   <PE_TrainingProficiency>Teaching {0} proficiency</PE_TrainingProficiency>
-  <PE_TeacherNotQualifiedProficiency>{0} does not have the required {1} proficiency to teach.</PE_TeacherNotQualifiedProficiency>
   <PE_TrainingSkill>Training {0} skill</PE_TrainingSkill>
   <PE_TeacherNotQualifiedSkill>{0}'s {1} skill is too low to teach (must be at least 5).</PE_TeacherNotQualifiedSkill>
   <PE_StudentSkillDisabled>{0}'s {1} skill is disabled and cannot be trained.</PE_StudentSkillDisabled>
@@ -76,20 +68,16 @@
   <PE_DaycareClassesLearningSpeed>Children learning need speed</PE_DaycareClassesLearningSpeed>
   <PE_EnableProficiencySystem>Enable proficiency system</PE_EnableProficiencySystem>
   <PE_EnableDebugMode>Enable debug mode</PE_EnableDebugMode>
-  <PE_EnterClassName>Enter a class name</PE_EnterClassName>
   <PE_SelectTeacher>Select a teacher</PE_SelectTeacher>
   <PE_SelectAtLeastOneStudent>Select at least one student</PE_SelectAtLeastOneStudent>
-  <PE_TeacherUnassigned>{0} has been unassigned as teacher: {1}</PE_TeacherUnassigned>
   <PE_NoLearningBoard>No learning board found in classroom</PE_NoLearningBoard>
   <PE_NoBell>No bell found in map</PE_NoBell>
-  <PE_BellNotPowered>Bell is not powered</PE_BellNotPowered>
   <PE_StudentsUnqualified>{0} cannot participate in class</PE_StudentsUnqualified>
   <PE_ClassroomSettings>Classroom settings</PE_ClassroomSettings>
   <PE_RestrictReservationsDuringClass>Disallow traditional work in classroom</PE_RestrictReservationsDuringClass>
   <PE_RestrictReservationsDuringClass_Desc>If enabled, pawns will not be able to use classroom furniture (desks, etc.).</PE_RestrictReservationsDuringClass_Desc>
   <PE_InterruptJobsDuringClass>Interrupt all jobs to attend classes here</PE_InterruptJobsDuringClass>
   <PE_InterruptJobsDuringClass_Desc>If enabled, pawns will interrupt all of their current jobs to attend class in this classroom when the bell rings.</PE_InterruptJobsDuringClass_Desc>
-  <PE_ClassCancelledOffMap>{0} class cancelled today as members are off map.</PE_ClassCancelledOffMap>
   <PE_ClassCancelledToday>{0} class cancelled today,</PE_ClassCancelledToday>
   <PE_NoClassesScheduled>No classes scheduled. Click the plus button to create a class.</PE_NoClassesScheduled>
   <PE_TriedToEquipButCouldNotDueToLackOfProficiency>{0} tried to equip {1} but couldn't due to lack of proficiency</PE_TriedToEquipButCouldNotDueToLackOfProficiency>
@@ -100,7 +88,6 @@
   <PE_ProficiencyClassNeverStarted>Class {0} never started as not all students arrived in time.</PE_ProficiencyClassNeverStarted>
   <PE_AlreadyHasLearningBoard>This room already has a learning board.</PE_AlreadyHasLearningBoard>
   <PE_LearningBoardNearby>There is another learning board too close nearby.</PE_LearningBoardNearby>
-  <PE_NoTeacherForBell>No valid teacher found for classroom. Cannot ring bell.</PE_NoTeacherForBell>
   <PE_SelectTrait>Select proficiency trait</PE_SelectTrait>
   <PE_ScenPart_ForcedProficiencyTrait>Starting colonists will be {0}.</PE_ScenPart_ForcedProficiencyTrait>
   <PE_ScenPart_ForcedProficiencyTrait_NoTrait>All starting colonists will have a proficiency trait.</PE_ScenPart_ForcedProficiencyTrait_NoTrait>
@@ -111,7 +98,6 @@
   <PE_Suspended>(suspended)</PE_Suspended>
   <PE_TeacherOffMap>Class {0} was cancelled because the teacher is not on its map.</PE_TeacherOffMap>
   <PE_NoStudents>Class {0} was cancelled as there were no students.</PE_NoStudents>
-  <PE_AddStudents>Add students</PE_AddStudents>
   <PE_ToggleStudentList>Edit class</PE_ToggleStudentList>
   <PE_AddedToDaycareOnAgeUp>{0} has aged up and has been automatically added to the "{1}" daycare.</PE_AddedToDaycareOnAgeUp>
   <PE_StudyGroupFull>Study group already has {0} students and cannot accept more.</PE_StudyGroupFull>
@@ -157,6 +143,8 @@
   <PE_EnableWeaponProficiency>Enable weapon proficiency</PE_EnableWeaponProficiency>
   <PE_EnableVehicleProficiency>Enable vehicle proficiency</PE_EnableVehicleProficiency>
   <PE_EnableSpeechProficiency>Enable speech proficiency</PE_EnableSpeechProficiency>
+  <PE_RequiresProficiencySystem>Requires the proficiency system to be enabled.</PE_RequiresProficiencySystem>
+  <PE_RequiresVehicleMod>Requires Odyssey, Giddy-Up or Vehicle Framework.</PE_RequiresVehicleMod>
   <PE_ShowClassSuspendedAlert>Show class suspended alert</PE_ShowClassSuspendedAlert>
   <PE_GiddyUpNeedRiding>Colonist must be taught animal riding proficiency.</PE_GiddyUpNeedRiding>
   <PE_VehicleProficiencyRequired>Requires {0} proficiency</PE_VehicleProficiencyRequired>

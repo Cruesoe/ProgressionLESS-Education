@@ -49,31 +49,65 @@ public static class TimeAssignmentUtility
 
     public static bool CanUse(this Pawn pawn, Building building)
     {
-        if (allowUsing)
+        if (allowUsing || !AnyRestrictedClassroom())
         {
             return true;
         }
 
-        var room = building.GetRoom();
-        if (room == null)
+        var manager = EducationManager.Instance;
+        var classrooms = manager.Classrooms;
+        Room room = null;
+        for (var i = 0; i < classrooms.Count; i++)
         {
-            return true;
-        }
+            var classroom = classrooms[i];
+            var board = classroom.LearningBoard?.parent;
+            if (!classroom.restrictReservationsDuringClass
+                || board == null
+                || board.Map != building.Map)
+            {
+                continue;
+            }
 
-        foreach (var classroom in EducationManager.Instance.Classrooms
-                     .Where(c =>
-                         c.restrictReservationsDuringClass
-                         && c.LearningBoard.parent.GetRoom() == room)
-                     .Where(c => EducationManager.Instance.StudyGroups
-                         .Any(sg => sg.classroom == c
-                                    && sg.subjectLogic.GetValidLearningBenches()
-                                        .Contains(building.def))))
-        {
-            EducationLog.Message($"Pawn {pawn.LabelShort} cannot use {building.Label} during active class time in classroom {classroom.name}.");
-            return false;
+            room ??= building.GetRoom();
+            if (room == null)
+            {
+                return true;
+            }
+
+            if (board.GetRoom() != room)
+            {
+                continue;
+            }
+
+            var studyGroups = manager.StudyGroups;
+            for (var j = 0; j < studyGroups.Count; j++)
+            {
+                var studyGroup = studyGroups[j];
+                if (studyGroup.classroom == classroom
+                    && studyGroup.subjectLogic.GetValidLearningBenches().Contains(building.def))
+                {
+                    EducationLog.Message($"Pawn {pawn.LabelShort} cannot use {building.Label} in classroom {classroom.name}.");
+                    return false;
+                }
+            }
         }
 
         return true;
+    }
+
+    // True when any classroom blocks other use of its furniture
+    public static bool AnyRestrictedClassroom()
+    {
+        var classrooms = EducationManager.Instance.Classrooms;
+        for (var i = 0; i < classrooms.Count; i++)
+        {
+            if (classrooms[i].restrictReservationsDuringClass)
+            {
+                return true;
+            }
+        }
+
+        return false;
     }
 
 
@@ -183,6 +217,11 @@ public static class TimeAssignmentUtility
         var defToRemove =
             DefDatabase<TimeAssignmentDef>.GetNamed(studyGroup.timeAssignmentDefName,
                 false);
+        if (defToRemove == null)
+        {
+            return;
+        }
+
         DefDatabase<TimeAssignmentDef>.Remove(defToRemove);
         EducationLog.Message($"Dynamic Def '{defToRemove.defName}' removed from database.");
     }

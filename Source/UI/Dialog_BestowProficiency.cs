@@ -11,6 +11,7 @@ public class Dialog_BestowProficiency : Window
     private ResearchGrantsTrait extension;
     private Vector2 scrollPos;
     private bool canClose;
+    private readonly List<Pawn> pawns;
 
     public override Vector2 InitialSize => new Vector2(450f, 600f);
 
@@ -21,7 +22,9 @@ public class Dialog_BestowProficiency : Window
         absorbInputAroundWindow = true;
         closeOnClickedOutside = false;
 
-        canClose = !EligiblePawns(ext.trait).Any();
+        // The game is paused while this window is open, so the list is built once
+        pawns = EligiblePawns(ext.trait).ToList();
+        canClose = pawns.Count == 0;
         closeOnCancel = canClose;
         closeOnAccept = canClose;
     }
@@ -49,11 +52,6 @@ public class Dialog_BestowProficiency : Window
         var description = "PE_BestowProficiencyDescWithProf".Translate(profName.Colorize(ColorLibrary.SkyBlue));
         var descHeight = Text.CalcHeight(description, inRect.width);
         Widgets.Label(new Rect(0, 35, inRect.width, descHeight), description);
-
-        var pawns = EligiblePawns(extension.trait).ToList();
-        canClose = pawns.Count == 0;
-        closeOnCancel = canClose;
-        closeOnAccept = canClose;
 
         var listTop = 35f + descHeight + 10f;
         var listRect = new Rect(0, listTop, inRect.width, inRect.height - listTop - 50f);

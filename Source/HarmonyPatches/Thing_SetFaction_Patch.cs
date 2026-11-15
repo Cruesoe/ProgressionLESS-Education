@@ -20,6 +20,7 @@ public static class Thing_SetFaction_Patch
             if (comp.classroom == null)
             {
                 comp.InitializeClassroom();
+                EducationManager.Instance.AddClassroom(comp.classroom);
             }
         }
         else if (newFaction != Faction.OfPlayer)

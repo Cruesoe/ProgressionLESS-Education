@@ -50,16 +50,31 @@ public class EducationSettings : ModSettings
             ref enableProficiencySystem);
 
         listing.Gap();
-        listing.CheckboxLabeled("PE_EnableKnowledgePanel".Translate(), ref enableKnowledgePanel);
-        listing.CheckboxLabeled("PE_BestowProficiencyToAll".Translate(), ref bestowProficiencyToAll);
-        listing.CheckboxLabeled("PE_EnableWeaponProficiency".Translate(), ref enableWeaponProficiency);
-        listing.CheckboxLabeled("PE_EnableVehicleProficiency".Translate(), ref enableVehicleProficiency);
-        listing.CheckboxLabeled("PE_EnableSpeechProficiency".Translate(), ref enableSpeechProficiency);
+        var proficiencyOff = enableProficiencySystem ? null : "PE_RequiresProficiencySystem".Translate().ToString();
+        DependentCheckbox(listing, "PE_EnableKnowledgePanel".Translate(), ref enableKnowledgePanel, proficiencyOff);
+        DependentCheckbox(listing, "PE_BestowProficiencyToAll".Translate(), ref bestowProficiencyToAll, proficiencyOff);
+        DependentCheckbox(listing, "PE_EnableWeaponProficiency".Translate(), ref enableWeaponProficiency, proficiencyOff);
+        DependentCheckbox(listing, "PE_EnableVehicleProficiency".Translate(), ref enableVehicleProficiency,
+            proficiencyOff ?? (ProficiencyUtility.AreVehicleModsActive ? null : "PE_RequiresVehicleMod".Translate().ToString()));
+        DependentCheckbox(listing, "PE_EnableSpeechProficiency".Translate(), ref enableSpeechProficiency, proficiencyOff);
         listing.Gap();
         listing.CheckboxLabeled("PE_ShowClassSuspendedAlert".Translate(), ref showClassSuspendedAlert);
         listing.Gap();
         listing.CheckboxLabeled("PE_EnableDebugMode".Translate(), ref debugMode);
         listing.End();
+    }
+
+    // Draws a checkbox greyed out and inert, with the reason as its tooltip, when disabledReason is set
+    private static void DependentCheckbox(Listing_Standard listing, string label, ref bool value, string disabledReason)
+    {
+        var rect = listing.GetRect(Text.LineHeight);
+        Widgets.CheckboxLabeled(rect, label, ref value, disabledReason != null);
+        if (disabledReason != null)
+        {
+            TooltipHandler.TipRegion(rect, disabledReason);
+        }
+
+        listing.Gap(listing.verticalSpacing);
     }
 
     public override void ExposeData()

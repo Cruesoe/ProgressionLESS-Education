@@ -167,7 +167,8 @@ public class DaycareClassLogic : ClassSubjectLogic
     public override void HandleStudentLifecycleEvents()
     {
         foreach (var student in studyGroup.students
-                     .Where(student => student.DevelopmentalStage != DevelopmentalStage.Child))
+                     .Where(student => student.DevelopmentalStage != DevelopmentalStage.Child)
+                     .ToList())
         {
             studyGroup.RemoveStudent(student);
         }

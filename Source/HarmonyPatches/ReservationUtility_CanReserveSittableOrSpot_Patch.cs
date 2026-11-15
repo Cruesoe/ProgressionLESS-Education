@@ -17,6 +17,11 @@ public static class ReservationUtility_CanReserveSittableOrSpot_Patch
         bool ignoreOtherReservations,
         ref bool __result)
     {
+        if (TimeAssignmentUtility.allowUsing || !TimeAssignmentUtility.AnyRestrictedClassroom())
+        {
+            return true;
+        }
+
         var edifice = exactSittingPos.GetEdifice(pawn.Map);
         if (edifice != null
             && !pawn.CanUse(edifice))

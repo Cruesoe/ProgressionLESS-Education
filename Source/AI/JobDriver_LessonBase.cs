@@ -26,7 +26,7 @@ public abstract class JobDriver_LessonBase : JobDriver
     public void DrawEquipment(Vector3 rootLoc, Rot4 pawnRotation, PawnRenderFlags flags)
     {
         if (weapon == null
-            || !StudyGroup.ClassIsActive())
+            || StudyGroup?.ClassIsActive() != true)
         {
             return;
         }

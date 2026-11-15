@@ -404,9 +404,7 @@ public class SkillClassLogic : ClassSubjectLogic
             {
                 text.AppendLineTagged(
                     $"{"PE_HourlyProgress".Translate()}:".AsTipTitle()
-                    + $" {xpPerHour
-                        * LearningSpeedModifier
-                        * studyGroup.classroom.ClassSpeed:F0}"
+                    + $" {xpPerHour:F0}"
                 );
                 text.AppendLine();
             }
@@ -432,7 +430,7 @@ public class SkillClassLogic : ClassSubjectLogic
                 var learningPerHour = CalculateLearningPerTick(pawn) * GenDate.TicksPerHour;
                 var learningPerSession = learningPerHour * studyGroup.Duration;
                 text.AppendLineTagged(
-                    $"{NeedDefOf.Learning.LabelCap} {"PE_Session".Translate()}:"
+                    $"{NeedDefOf.Learning.LabelCap} {"PE_PerSession".Translate()}:"
                         .AsTipTitle()
                     + $" {learningPerSession.ToStringPercent()}"
                 );

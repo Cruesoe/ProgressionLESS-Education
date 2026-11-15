@@ -7,11 +7,6 @@ using Verse;
 
 namespace ProgressionEducation;
 
-[AttributeUsage(AttributeTargets.Class | AttributeTargets.Struct)]
-public class HotSwappableAttribute : Attribute
-{
-}
-
 [HotSwappable]
 public class Window_ColorPicker : Window
 {

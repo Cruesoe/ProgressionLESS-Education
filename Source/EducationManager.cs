@@ -103,7 +103,7 @@ public class EducationManager(World world) : WorldComponent(world)
             EducationLog.Message($"Generating TimeAssignmentDef for study group '{studyGroup.className}'");
             TimeAssignmentUtility.GenerateTimeAssignmentDef(studyGroup);
         }
-        foreach (var pawn in PawnsFinder.AllMapsAndWorld_Alive)
+        foreach (var pawn in PawnsFinder.AllMapsAndWorld_Alive.ToList())
         {
             ProficiencyUtility.ApplyProficiencyTraitToPawn(pawn);
         }
@@ -324,7 +324,8 @@ public class EducationManager(World world) : WorldComponent(world)
 
         foreach (var classroom in Classrooms
                      .Where(classroom => classroom.LearningBoard == null
-                                         || classroom.LearningBoard.parent.Destroyed))
+                                         || classroom.LearningBoard.parent.Destroyed)
+                     .ToList())
         {
             EducationLog.Message($"EducationManager.WorldComponentTick Classroom '{classroom.name}' has no valid learning board. Removing classroom.");
             RemoveClassroom(classroom);
