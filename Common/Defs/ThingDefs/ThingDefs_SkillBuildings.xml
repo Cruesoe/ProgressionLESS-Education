@@ -43,6 +43,11 @@
                 <cornerBR>Damage/Corner</cornerBR>
             </damageData>
         </graphicData>
+        <comps>
+            <li Class="ProgressionEducation.CompProperties_WeaponTrainingBench">
+                <weaponDef>MeleeWeapon_Club</weaponDef>
+            </li>
+        </comps>
     </ThingDef>
 
     <ThingDef ParentName="BuildingBase">
