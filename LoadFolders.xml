@@ -40,6 +40,7 @@
     <li IfModActive="ferny.noderesearch">Common/Mods and Shit/Node Research</li>
     <li IfModActive="bs.mbifvte">Common/Mods and Shit/Main Button Icons</li>
     <li IfModActive="CETeam.CombatExtended">Common/Mods and Shit/Combat Extended</li>
+    <li IfModActive="TRIBeagle.simpleslaverycollars">Common/Mods and Shit/SimpleSlaveryCollars</li>
     <!-- <li IfModActive="Collapse.DunesOfRim.Atreides">Common/Mods and Shit/DunesOfRim Atreides</li>
     <li IfModActive="Collapse.DunesOfRim.Harkonnen">Common/Mods and Shit/DunesOfRim Harkonnen</li>
     <li IfModActive="Collapse.DunesOfRim.Fremen">Common/Mods and Shit/DunesOfRim Fremen</li> -->
@@ -87,6 +88,7 @@
     <li IfModActive="ferny.noderesearch">Common/Mods and Shit/Node Research</li>
     <li IfModActive="bs.mbifvte">Common/Mods and Shit/Main Button Icons</li>
     <li IfModActive="CETeam.CombatExtended">Common/Mods and Shit/Combat Extended</li>
+    <li IfModActive="TRIBeagle.simpleslaverycollars">Common/Mods and Shit/SimpleSlaveryCollars</li>
     <!-- <li IfModActive="Collapse.DunesOfRim.Atreides">Common/Mods and Shit/DunesOfRim Atreides</li>
     <li IfModActive="Collapse.DunesOfRim.Harkonnen">Common/Mods and Shit/DunesOfRim Harkonnen</li>
     <li IfModActive="Collapse.DunesOfRim.Fremen">Common/Mods and Shit/DunesOfRim Fremen</li> -->

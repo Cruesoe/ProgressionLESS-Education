@@ -30,6 +30,7 @@ Keeps all of the original's mod support:
 [*]It works with Character Development, Character Creator, Better Architect, Node Research and Bradson's Main Button Icons.
 [*]It works with several faction and scenario mods, including Samurai Faction, Satyr/Faun and Minotaur Expanded, Rimfather, Brave New Frontier, Orbital Station Start and Debt-Bound Gravship.
 [*]Under Combat Extended, the training rifle, bow and charge rifle stay as vanilla training weapons.
+[*]With Simple Slavery Collars, slaves can wear the electric and crypto collars without high-tech proficiency.
 [/list]
 
 [b]Replaces the original. Don't use both.[/b]
