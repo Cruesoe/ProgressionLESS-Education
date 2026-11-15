@@ -11,6 +11,28 @@
     </value>
   </Operation>
 
+  <!-- Bulk as CE gives the matching vanilla weapons; it also marks them patched for Nuff's Auto-Patcher -->
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/ThingDef[defName="PE_Gun_AssaultRifleTraining"]/statBases</xpath>
+    <value>
+      <Bulk>11.92</Bulk>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/ThingDef[defName="PE_PracticeShortBow"]/statBases</xpath>
+    <value>
+      <Bulk>4.00</Bulk>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/ThingDef[defName="PE_Gun_SpacerTraining"]/statBases</xpath>
+    <value>
+      <Bulk>7.00</Bulk>
+    </value>
+  </Operation>
+
   <Operation Class="PatchOperationReplace">
     <xpath>Defs/ThingDef[defName="PE_Gun_AssaultRifleTraining" or defName="PE_Gun_SpacerTraining"]/tools</xpath>
     <value>
